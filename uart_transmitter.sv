@@ -53,7 +53,7 @@ module uart_transmitter #(
                 SENDING: begin
                     if(shift_reg[9:1] == 0) state <= IDLE;
                     clk_div_cntr <= (clk_div_cntr == CLKDIVTHRESHOLD) ? 0 : (clk_div_cntr + 1);
-                end
+                    end
                 default: /**/;
             endcase
         end
